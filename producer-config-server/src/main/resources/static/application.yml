@@ -1,0 +1,2 @@
+consumer:
+  environment: "alpha" #this configuration will be sent to the consumer applications
