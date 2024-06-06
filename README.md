@@ -1,4 +1,3 @@
-````markdown
 # Spring Cloud Config Server and Client Example
 
 This project demonstrates the usage of Spring Cloud Config Server and Client to manage configurations centrally and distribute them to multiple client applications using Spring Cloud Bus for communication and dynamic configuration refresh.
