@@ -40,7 +40,7 @@ mvn spring-boot:run
 ### Run Consumer 1 (Client):
 
 ```bash
-cd ../consumer_1
+cd consumer_1
 mvn spring-boot:run
 ```
 
