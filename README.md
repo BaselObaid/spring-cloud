@@ -53,13 +53,11 @@ mvn spring-boot:run
 ### Producer Config Server
 
 - **application.yml**: Configures the server port and sets up Spring Cloud Bus destination for communication.
-- **bootstrap.yml**: Configures the native profile for serving configurations from the classpath.
-- **consumer.yaml**: Example configuration file served by the server.
-
+- **static/application.yml**: Configures the native profile for serving configurations from the classpath.
+- 
 ### Consumer 1 (Client)
 
 - **application.yml**: Configures the server port and sets up Spring Cloud Bus destination for communication.
-- **bootstrap.yml**: Imports configurations from the Config Server.
 - **ConfigurationsStatusViewer.java**: Component that listens for changes and logs the updated configuration.
 
 ## Refreshing Client Configuration
@@ -68,10 +66,10 @@ To refresh the configuration of the client, you can use the Spring Boot Actuator
 
 1. Make sure the Producer Config Server and Consumer 1 (Client) applications are running.
 
-2. Send a POST request to the `/actuator/bus-refresh` endpoint of the Consumer 1 application:
+2. Send a POST request to the `/actuator/busrefresh` endpoint of the Producer application:
 
 ```bash
-curl -X POST http://localhost:8001/actuator/bus-refresh
+curl -X POST http://localhost:8888/actuator/busrefresh
 ```
 
 This will trigger a refresh of the client's configuration. You should see the updated configuration reflected in the logs of the Consumer 1 application.
@@ -79,7 +77,3 @@ This will trigger a refresh of the client's configuration. You should see the up
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to contribute enhancements, feel free to open a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
