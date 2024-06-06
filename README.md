@@ -24,6 +24,7 @@ The project consists of two Spring Boot applications:
 - RabbitMQ server running locally (for Spring Cloud Bus communication)
 
 ## Getting Started
+clone the repo [spring-cloud-bus](https://github.com/BaselObaid/spring-cloud-bus.git)
 
 ### Run RabbitMQ Server:
 
